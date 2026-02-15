@@ -1,9 +1,10 @@
 import random
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, colormode
 
 tim = Turtle()
 tim.shape("turtle")
 tim.color("red")
+colormode(255)
 
 colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 #For a square
@@ -21,17 +22,17 @@ colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSea
 
 
 #Draw a triangle, square, pentagon, hexagon, heptagon,octagon, nonagon, and decagon
-#def drwas_shapes(number_of_sides):
-#    angle = 360 / number_of_sides
-#    for _ in range(number_of_sides):
-#        tim.forward(100)
-#        tim.right(angle)
+"""def drwas_shapes(number_of_sides):
+    angle = 360 / number_of_sides
+    for _ in range(number_of_sides):
+        tim.forward(100)
+        tim.right(angle)
     
-#for shape_side in range(3, 11):
-#    drwas_shapes(shape_side)
+for shape_side in range(3, 11):
+    drwas_shapes(shape_side)"""
 
 #Challenge 4, Random Walk
-screen = Screen()
+"""screen = Screen()
 screen.setup(600, 600)
 STEP = 20
 LIMIT = 280
@@ -50,9 +51,19 @@ def right_direction():
     tim.forward(50)
 
 
-random_direction = [up_direction,down_direction, left_direction, right_direction]
+random_direction = [up_direction,down_direction, left_direction, right_direction]"""
 
-for _ in range(100):
+
+"""def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    random_colors = (r,g,b)
+    return random_color"""
+    
+
+
+"""for _ in range(100):
     move = random.choice(random_direction)
     move()
     tim.color(random.choice(colours))
@@ -67,7 +78,30 @@ for _ in range(100):
         tim.setheading(180 - tim.heading())
 
     if y > LIMIT or y < -LIMIT:
-        tim.setheading(-tim.heading())
+        tim.setheading(-tim.heading())"""
+
+
+#Challenge 5 Drawinfg circles
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    random_color = (r,g,b)
+    return random_color
+
+number_of_circles = int(360 / 5)
+
+for _ in range(number_of_circles):
+    tim.color(random_color())
+    tim.circle(150)
+    tim.right(5)
+    tim.speed("fastest")
+    
+
+
+
+
+
 
 
 
