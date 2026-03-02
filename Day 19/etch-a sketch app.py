@@ -19,7 +19,9 @@ def clockwise():
 
 def clear_drawing():
     tim.clear()
-
+    tim.penup()
+    tim.home()
+    tim.pendown()
 
 
 
