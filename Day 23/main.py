@@ -35,7 +35,7 @@ while game_is_on:
     if turtle.ycor() >= 250:           
             turtle.refresh() 
             score.score_increase()   
-            time_sleep * 0.9 
+            time_sleep * 0.5
             
             
 screen.exitonclick()
