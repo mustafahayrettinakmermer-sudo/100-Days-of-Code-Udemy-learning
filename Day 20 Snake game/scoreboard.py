@@ -5,11 +5,16 @@ class scoreboard(Turtle):
         super().__init__()
         self.score = 0
         self.high_Score = 0
+        
+        with open("Day 20 Snake game/data.txt") as file:
+            self.high_Score = int(file.read())
+
         self.color("white")
         self.penup()
         self.hideturtle()
         self.goto(0, 260)
         self.update_score()
+        
 
     def update_score(self):
         self.clear()
@@ -23,7 +28,13 @@ class scoreboard(Turtle):
         if self.score > self.high_Score:
             self.high_Score = self.score
         self.score = 0
+        
+        with open("Day 20 Snake game/data.txt", mode="w") as file:
+            file.write(str(self.high_Score))
+        
         self.update_score()
+
+    
 
     #def game_over(self):
     #    self.goto(0,0)

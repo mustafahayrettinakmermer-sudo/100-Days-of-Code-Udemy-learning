@@ -21,7 +21,6 @@ screen.onkey(snake.snake_right, "Right")
 
 
 
-
 game_is_on = True
 while game_is_on:
     screen.update()
@@ -43,6 +42,8 @@ while game_is_on:
         elif snake.head.distance(segment) < 10:
             score.reset()
             snake.reset()
+
+    
     
         
         
